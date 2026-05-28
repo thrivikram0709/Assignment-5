@@ -1,0 +1,12 @@
+import random
+
+wins = 0
+
+for i in range(10):
+
+    result = random.choice([0, 1])
+
+    if result == 1:
+        wins = wins + 1
+
+print("Wins =", wins)

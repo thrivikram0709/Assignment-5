@@ -1,0 +1,19 @@
+tree = [3, 5, 6, 9]
+
+alpha = -999
+beta = 999
+
+best = -999
+
+for i in tree:
+
+    if i > best:
+        best = i
+
+    if best > alpha:
+        alpha = best
+
+    if beta <= alpha:
+        break
+
+print("Best value is", best)

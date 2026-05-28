@@ -1,0 +1,25 @@
+values = [3, 5, 2, 9]
+
+def minimax(arr, player):
+
+    if len(arr) == 1:
+        return arr[0]
+
+    new_arr = []
+
+    for i in range(0, len(arr), 2):
+
+        if player == "MAX":
+            new_arr.append(max(arr[i], arr[i+1]))
+
+        else:
+            new_arr.append(min(arr[i], arr[i+1]))
+
+    if player == "MAX":
+        return minimax(new_arr, "MIN")
+
+    else:
+        return minimax(new_arr, "MAX")
+
+
+print(minimax(values, "MAX"))

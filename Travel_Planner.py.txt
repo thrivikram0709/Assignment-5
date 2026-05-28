@@ -1,0 +1,92 @@
+print("------ UNIVERSAL TRAVEL PLANNER ------")
+
+name = input("Enter your name: ")
+country = input("Enter country you want to visit: ")
+budget = int(input("Enter your budget: "))
+days = int(input("Enter number of days: "))
+food = input("Food preference (Veg/Non-Veg): ")
+
+print("\n------ TRAVEL PLAN ------")
+
+print("Traveller Name :", name)
+print("Country :", country)
+print("Days :", days)
+print("Food Preference :", food)
+
+# Hotel Suggestion
+
+if budget < 5000:
+    hotel = "Budget Hotel"
+
+elif budget >= 5000 and budget < 15000:
+    hotel = "3 Star Hotel"
+
+else:
+    hotel = "5 Star Hotel"
+
+print("Suggested Hotel :", hotel)
+
+# Transport Suggestion
+
+if country == "India":
+    transport = "Train / Bus"
+
+else:
+    transport = "Flight"
+
+print("Suggested Transport :", transport)
+
+# Tour Suggestion
+
+if days <= 2:
+    print("Short Trip Plan")
+
+elif days > 2 and days <= 5:
+    print("Medium Trip Plan")
+
+else:
+    print("Long Vacation Plan")
+
+# Tourist Places
+
+if country == "India":
+
+    print("Suggested Places:")
+    print("1. Goa")
+    print("2. Kerala")
+    print("3. Hyderabad")
+
+elif country == "France":
+
+    print("Suggested Places:")
+    print("1. Paris")
+    print("2. Eiffel Tower")
+    print("3. Louvre Museum")
+
+elif country == "Japan":
+
+    print("Suggested Places:")
+    print("1. Tokyo")
+    print("2. Mount Fuji")
+    print("3. Kyoto")
+
+else:
+    print("Tourist place data not available")
+
+# Final Expense
+
+hotel_cost = days * 1000
+food_cost = days * 500
+travel_cost = 3000
+
+total = hotel_cost + food_cost + travel_cost
+
+print("\nEstimated Cost =", total)
+
+if total > budget:
+    print("Warning: Budget may not be sufficient")
+
+else:
+    print("Budget is sufficient")
+
+print("\nThank You For Using Universal Travel Planner")
